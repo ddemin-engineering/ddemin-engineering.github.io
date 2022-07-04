@@ -29,7 +29,10 @@ export default {
     prerender: {
       // This can be false if you're using a fallback (i.e. SPA mode)
       default: true
-    }
+    },
+    paths: {
+      base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
+    },
   }
   
 };
