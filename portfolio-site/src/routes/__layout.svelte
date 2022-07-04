@@ -8,6 +8,6 @@
     import Header from "../lib/header/Header.svelte";
 </script>
 
-<!-- </Header> -->
+<Header></Header>
 
 <slot></slot>
