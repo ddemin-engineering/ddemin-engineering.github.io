@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" class="border-double border-4 border-indigo-600 "}>
+<head >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,10 @@
           rel="stylesheet"> 
     <title>Document</title>
 </head>
-<body>
+<body >
     <!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-gray-800">
+    <!-- This is a Nav bar  -->
+<nav class="bg-gray-700 border-double border-4 border-indigo-600">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -97,13 +98,39 @@
   </div>
 </nav>
 
+<!-- Flex or Grid for 1 column site -->
+<div class="grid grid-col justify-content:center bg-slate-400">
+<!-- <div class="flex justify-content:center "> -->
+  
+  <!-- 1. Top thing you see. "Hi! I'm Dmitry Demin etc etc" -->
+  <div class="flex flex-col font-sans border-double border-4 border-indigo-600">
 
-  <div class="flex font-sans">
-      <p class="text-5xl">
-        Testing
+    <!-- Big letters text for @1 TOP -->
+    <p class="pt-16 pb-2 px-4 text-3xl">
+      Hi! My name is Dmitry Demin
+    </p>
+
+    <!-- Inner smaller text for @1 TOP -->
+    <div>
+      <!-- Left text -->
+      <p class=" pl-4 text-xl">
+        I'm a Mechatronic Systems Engineering Undergrad at SFU
       </p>
-      <a href="https://app.testdome.com/cert/9d94b64c979840d4b261e6bd1986d1c9" class="testdome-certificate-stamp gold"><span class="testdome-certificate-name">Dmitry Demin</span><span class="testdome-certificate-test-name">Python </span><span class="testdome-certificate-card-logo">TestDome<br />Certificate</span></a><script>var stylesheet = "https://app.testdome.com/content/source/stylesheets/embed.css", link = document.createElement("link"); link.href = stylesheet, link.type = "text/css", link.rel = "stylesheet", link.media = "screen,print", document.getElementsByTagName("head")[0].appendChild(link);</script>
+      <!-- Right text -->
+      <p class="text-right pl-4 text-lg">
+        also a passionate developer with knowledge of: 
+      </p>
+      
+    </div>
   </div>
+  
+  <!-- Certificate badge from TESTDOME -->
+  <div class="grid justify-items-center border-double border-4 border-indigo-600">
+    <a href="https://app.testdome.com/cert/9d94b64c979840d4b261e6bd1986d1c9" class="testdome-certificate-stamp gold"><span class="testdome-certificate-name">Dmitry Demin</span><span class="testdome-certificate-test-name">Python </span><span class="testdome-certificate-card-logo">TestDome<br />Certificate</span></a><script>var stylesheet = "https://app.testdome.com/content/source/stylesheets/embed.css", link = document.createElement("link"); link.href = stylesheet, link.type = "text/css", link.rel = "stylesheet", link.media = "screen,print", document.getElementsByTagName("head")[0].appendChild(link);</script>
     
+  </div>
+<!-- </div> -->
+
+</div>
 </body>
 </html>
