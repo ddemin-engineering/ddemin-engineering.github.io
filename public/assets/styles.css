@@ -165,7 +165,7 @@ nav {
         /* object-fit: cover; */
         padding-left: 1em;
         height: 25vh;
-        border: rgb(53, 52, 52) solid;
+        border: rgb(53, 52, 52) solid 1px;
         /* width: auto; */
         /* style="height: 25vh; width:auto; " */
     }
@@ -183,8 +183,9 @@ nav {
     }
         .skillsLine .skill-left{
             /* border: rgb(53, 52, 52) solid; */
-            width: 50%;
+            flex: 1;
             font-family: 'Cormorant SC', serif;
+            /* border: #000 dotted; */
             /* justify-content: left; */
         }
         .skillsLine .skill-right{
@@ -197,7 +198,7 @@ nav {
             .skillsLine .skill-left{
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
+                object-fit: cover;
             }
             .skillsLine .skill-right img{
                 width: 100%;
