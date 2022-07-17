@@ -130,7 +130,7 @@ nav {
         justify-content: center;
         align-items: center;
         padding-inline: 6em;
-        padding-block: 2em;
+        padding-block: 3em;
         height: 35vh;
         
         background-color: hsl(218, 18%, 75%);
@@ -211,3 +211,11 @@ nav {
                 height: 100%;
                 object-fit: cover;
             }
+
+            /* This works when hovering above ID: MECHANICAL */
+      
+        /* .skillsLine:hover #mechanical .skill-right img{
+            background: url("public/assets/skillsIMG/electronic.jpg") no-repeat;
+
+            src:"public/assets/skillsIMG/electronic.jpg"; 
+        }    */
