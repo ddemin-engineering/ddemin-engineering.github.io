@@ -1,5 +1,13 @@
+/* @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
+
+}
+
+ul {
+    list-style-type: circle;
 }
 
 nav {
@@ -10,8 +18,10 @@ nav {
     height: 15vh;
     background-color: hsl(218, 18%, 45%);
 
+    font-family: 'Cormorant SC', serif;
 
-    border-style: dashed;
+    /* border-style: solid; */
+    border-bottom: solid 1px;
 }
     /* nav > img {
         height: 15vh;
@@ -26,12 +36,7 @@ nav {
 
 
     nav img {
-        /* display: flex; */
-        /* border-style: dotted; */
-        /* color: #fff; */
-        align-self: center;
-        /* margin-left: 1em;
-        margin-right: 1em; */
+        align-self: center;        
         height: 100%;
         width: auto;
         object-fit: cover;
@@ -42,29 +47,160 @@ nav {
     flex-direction: column;
     /* grid-column: 1; */
     justify-content:flex-start;
+
+    
 } 
 
+    /* For debugging, TURNS ON the BORDER on all the DIVs */
     .main-page > div{
-        border-style: dotted;
+        display: flex;
+        flex-direction: column;
+
+        /* border-style: dotted; */
+        /* border: rgb(53, 52, 52) dotted; */
     }
     
     /* INTRO:  All intro here, from Hi! My name .. to ..dev in free time */
     .main-page .intro-wrapper{
         /* padding-top: 16em; */
-        padding: 16vh 4vh 2vh 4vh;
+        padding: 10vh 4vh 2vh 4vh;
         font-size: 3em;
-
+        font-family: 'Cormorant SC', serif;
         background:  hsl(218, 18%, 80%);
-        /* pt-16 pb-2 px-4 text-3xl */
     }
 
-    .main-page .intro-wrapper > div {
-        display: flex;
-        flex-direction: column;
+    
+    .main-page .intro-wrapper .backgroundSkew{
+        background: hsl(218, 18%, 45%);
+        max-width: 800px; 
+
+        margin-inline: 0.25em;
+        
+        -ms-transform: skewX(20deg); /* IE 9 */
+        -webkit-transform: skewX(20deg); /* Safari */
+        transform: skewX(20deg);
+        
+    }
+    
+    .anitiSkewText {
+        
+        -ms-transform: skewX(-20deg); /* IE 9 */
+        -webkit-transform: skewX(-20deg); /* Safari */
+        transform: skewX(-20deg);
+        padding: 20px
+        
+        
+    }
+    
+    
+    
+    /* whole second part of intro */
+    .main-page .intro-wrapper > div:not(:first-child) {
+        display: flex; 
+        flex-direction: column; 
         font-size: 0.5em;
     }
 
-    /* and a developer in my free time {on the right side} */
-    .main-page .intro-wrapper > div :last-child {
-        align-self: flex-end;
+    /* I'm a mechatronic systems engineering ... */
+    .intro2-smaller p{ 
+        align-self: start;
+        border: rgb(53, 52, 52) solid 1px;
+        box-shadow: 0.25em 0.25em rgb(53, 52, 52);
+        /* border: rgb(53, 52, 52) dotted; */
     }
+    /* and a developer in my free time {on the right side} */
+    .intro2-smaller p:last-of-type {
+        align-self: flex-end;
+        /* justify-self: flex-end; */
+        border: rgb(53, 52, 52) solid 1px;
+        box-shadow: 0.25em 0.25em rgb(53, 52, 52);
+    }
+
+
+    /* WARNING SIGN */
+    .warning-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 6em;
+        padding-block: 2em;
+        height: 35vh;
+        
+        background-color: hsl(218, 18%, 75%);
+
+        /* border-style:inset; */
+        border-color: green;
+        /* border-radius: 25%; */
+        border-width: 0.1em;
+        /* grid justify-center justify-items-center py-6 px-4   */
+    }
+
+    .warning-wrapper img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .main-page .certificate-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding-block: 1em;
+        /* grid justify-items-center  */
+    }
+
+
+    .skill-flex{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .skillsLine{
+        display: flex;
+        flex-direction: row;
+        /* align-items: flex-start; */
+        /* object-fit: cover; */
+        padding-left: 1em;
+        height: 25vh;
+        border: rgb(53, 52, 52) solid;
+        /* width: auto; */
+        /* style="height: 25vh; width:auto; " */
+    }
+
+    /* Fix for the landscape mode {breaks the height of the skillsLine */
+    @media screen  and  (max-height: 600px){
+        .skillsLine{
+            height: 30vh;
+        }
+    }
+    @media screen  and  (max-height: 450px){
+        .skillsLine{
+            height: 40vh;
+        }
+    }
+        .skillsLine .skill-left{
+            /* border: rgb(53, 52, 52) solid; */
+            width: 50%;
+            font-family: 'Cormorant SC', serif;
+            /* justify-content: left; */
+        }
+        .skillsLine .skill-right{
+            /* border: rgb(53, 52, 52) solid; */
+            /* /* display: flex; */
+            width: 50%;
+            justify-content: flex-end;
+        }
+
+            .skillsLine .skill-left{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            .skillsLine .skill-right img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
