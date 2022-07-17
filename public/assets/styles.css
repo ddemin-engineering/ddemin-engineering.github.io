@@ -65,6 +65,8 @@ nav {
         /* padding-top: 16em; */
         padding: 10vh 4vh 2vh 4vh;
         font-size: 3em;
+        text-shadow: 2px 2px #000 ;
+        color:#fff;
         font-family: 'Cormorant SC', serif;
         background:  hsl(218, 18%, 80%);
     }
@@ -79,7 +81,9 @@ nav {
         -ms-transform: skewX(20deg); /* IE 9 */
         -webkit-transform: skewX(20deg); /* Safari */
         transform: skewX(20deg);
-        
+
+        /* border-style: ; */
+        border-bottom: #000 solid 1px;
     }
     
     .anitiSkewText {
@@ -96,6 +100,8 @@ nav {
     
     /* whole second part of intro */
     .main-page .intro-wrapper > div:not(:first-child) {
+        color:#000;
+        text-shadow: none;
         display: flex; 
         flex-direction: column; 
         font-size: 0.5em;
