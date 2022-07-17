@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    /* flex-direction: row; */
+    padding: 0.75em;
+    justify-items: flex-start;
+    height: 15vh;
+    background-color: hsl(218, 18%, 45%);
+
+
+    border-style: dashed;
+}
+    /* nav > img {
+        height: 15vh;
+    } */
+    nav h2 {
+        display: flex;
+        color: #fff;
+        margin-left: 1em;
+        /* border-style: dashed; */
+        align-items: center;
+    }
+
+
+    nav img {
+        /* display: flex; */
+        /* border-style: dotted; */
+        /* color: #fff; */
+        align-self: center;
+        /* margin-left: 1em;
+        margin-right: 1em; */
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+
+.main-page{
+    display:flex;
+    flex-direction: column;
+    /* grid-column: 1; */
+    justify-content:flex-start;
+} 
+
+    .main-page > div{
+        border-style: dotted;
+    }
+    
+    /* INTRO:  All intro here, from Hi! My name .. to ..dev in free time */
+    .main-page .intro-wrapper{
+        /* padding-top: 16em; */
+        padding: 16vh 4vh 2vh 4vh;
+        font-size: 3em;
+
+        background:  hsl(218, 18%, 80%);
+        /* pt-16 pb-2 px-4 text-3xl */
+    }
+
+    .main-page .intro-wrapper > div {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.5em;
+    }
+
+    /* and a developer in my free time {on the right side} */
+    .main-page .intro-wrapper > div :last-child {
+        align-self: flex-end;
+    }
