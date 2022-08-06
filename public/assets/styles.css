@@ -89,8 +89,7 @@ nav {
         /* animation for the background skew */
         .main-page .intro-wrapper .backgroundSkew:hover{
             background: hsl(218, 38%, 59%);
-            transition-delay: 0.1s;
-            transition-timing-function: linear;
+            transition: 250ms background linear;            
         }
     
     .anitiSkewText {
@@ -123,8 +122,7 @@ nav {
     }
         .intro2-smaller p:hover{ 
             background: hsl(213, 12%, 85%);
-            transition-delay: 0.1s;
-            transition-timing-function: linear;
+            transition: 250ms background linear;
         }
 
     /* and a developer in my free time {on the right side} */
@@ -136,8 +134,7 @@ nav {
     }
         .intro2-smaller p:last-of-type:hover {
             background: hsl(213, 12%, 85%);
-            transition-delay: 0.1s;
-            transition-timing-function: linear;
+            transition: 250ms background linear;
         }
 
 
