@@ -234,8 +234,8 @@ nav {
             }
 
             /* This works when hovering above ID: MECHANICAL */
-      
-        /* .skillsLine:hover #mechanical .skill-right img{
+/*       
+        .skillsLine:hover #mechanical .skill-right img{
             background: url("public/assets/skillsIMG/electronic.jpg") no-repeat;
 
             src:"public/assets/skillsIMG/electronic.jpg"; 
