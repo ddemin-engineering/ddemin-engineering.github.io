@@ -71,20 +71,27 @@ nav {
         background:  hsl(218, 18%, 80%);
     }
 
-    
-    .main-page .intro-wrapper .backgroundSkew{
-        background: hsl(218, 18%, 45%);
-        max-width: 800px; 
-
-        margin-inline: 0.25em;
         
-        -ms-transform: skewX(20deg); /* IE 9 */
-        -webkit-transform: skewX(20deg); /* Safari */
-        transform: skewX(20deg);
+        .main-page .intro-wrapper .backgroundSkew{
+            background: hsl(218, 18%, 45%);
+            max-width: 800px; 
 
-        /* border-style: ; */
-        border-bottom: #000 solid 1px;
-    }
+            margin-inline: 0.25em;
+            
+            -ms-transform: skewX(20deg); /* IE 9 */
+            -webkit-transform: skewX(20deg); /* Safari */
+            transform: skewX(20deg);
+
+            /* border-style: ; */
+            border-bottom: #000 solid 1px;
+        }
+
+        /* animation for the background skew */
+        .main-page .intro-wrapper .backgroundSkew:hover{
+            background: hsl(218, 38%, 59%);
+            transition-delay: 0.1s;
+            transition-timing-function: linear;
+        }
     
     .anitiSkewText {
         
@@ -114,6 +121,12 @@ nav {
         box-shadow: 0.25em 0.25em rgb(53, 52, 52);
         /* border: rgb(53, 52, 52) dotted; */
     }
+        .intro2-smaller p:hover{ 
+            background: hsl(213, 12%, 85%);
+            transition-delay: 0.1s;
+            transition-timing-function: linear;
+        }
+
     /* and a developer in my free time {on the right side} */
     .intro2-smaller p:last-of-type {
         align-self: flex-end;
@@ -121,6 +134,11 @@ nav {
         border: rgb(53, 52, 52) solid 1px;
         box-shadow: 0.25em 0.25em rgb(53, 52, 52);
     }
+        .intro2-smaller p:last-of-type:hover {
+            background: hsl(213, 12%, 85%);
+            transition-delay: 0.1s;
+            transition-timing-function: linear;
+        }
 
 
     /* WARNING SIGN */
