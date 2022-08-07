@@ -1,0 +1,80 @@
+
+/* @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    
+}
+
+/* nav bar has links, but they are invisible for a person */
+#linksContainer{
+    display: none;
+}
+
+/* removes link UNDERLINE in Skill Cards and EVERYWHERE else, also removes purple color of visited page */
+a:link{text-decoration: none; color: black;}
+a:visited{text-decoration: none;color: black;}
+a:hover{text-decoration: none;color: black;}
+a:active{text-decoration: none;color: black;}
+
+body {
+    background:  hsl(218, 18%, 80%);
+    
+}
+
+ul {
+    list-style-type: circle;
+}
+
+nav {
+    display:flex;
+    /* border-style: solid; */
+    border-bottom: solid 1px;
+    background-color: hsl(218, 18%, 45%);
+}
+
+nav a{
+    display: flex;
+    /* flex-direction: row; */
+    padding: 0.75em;
+    justify-items: flex-start;
+    height: 15vh;
+    font-family: 'Cormorant SC', serif;
+}
+    /* nav > img {
+        height: 15vh;
+    } */
+    nav a h2 {
+        display: flex;
+        color: #fff;
+        margin-left: 1em;
+        /* border-style: dashed; */
+        align-items: center;
+    }
+
+
+    nav a img {
+        align-self: center;        
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+
+.main-page{
+    display:flex;
+    flex-direction: column;
+    /* grid-column: 1; */
+    justify-content:flex-start;
+
+    
+} 
+
+    /* For debugging, TURNS ON the BORDER on all the DIVs */
+    .main-page > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border-style: dotted; */
+        /* border: rgb(53, 52, 52) dotted; */
+    }
