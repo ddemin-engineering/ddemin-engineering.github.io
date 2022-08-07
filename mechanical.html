@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Using this you won't get a cached version of your page.-->
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- Fonts font-family: 'Cormorant SC', serif;
+      font-family: 'Quicksand', sans-serif;
+      font-family: 'Roboto', sans-serif; -->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap">
+      <link href="mechanical/mech-styles.css" rel="stylesheet">
+
     <title>DD:/Mechanical</title>
 </head>
 <body>
-    <h1>DD:/Mechanical</h1>
+    <!-- This is a Nav bar  -->
+    <nav>
+        <img  src="./public/assets/svgLogoinverted.svg" alt="logo">
+        <h2>DDemin-Engineering</h2>
+
+        <div id="linksContainer">
+            <a href="./mechanical.html">Mechanical</a><a href="./electrical.html">Electrical</a><a href="./systems.html">Systems</a><a href="./programming.html">Programming</a>
+        </div>
+    </nav>
+
+    <!-- Flex for 1 column site -->
+    <div class="main-page" >
+        <div>
+            <p>Main page</p>
+            <h1>DD:/Mechanical</h1>
+        </div>
+    </div>
+    
 </body>
 </html>

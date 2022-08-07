@@ -1,0 +1,72 @@
+
+/* @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    
+}
+
+/* nav bar has links, but they are invisible for a person */
+#linksContainer{
+    display: none;
+}
+
+body {
+    background:  hsl(218, 18%, 80%);
+    
+}
+
+ul {
+    list-style-type: circle;
+}
+
+nav {
+    display: flex;
+    /* flex-direction: row; */
+    padding: 0.75em;
+    justify-items: flex-start;
+    height: 15vh;
+    background-color: hsl(218, 18%, 45%);
+
+    font-family: 'Cormorant SC', serif;
+
+    /* border-style: solid; */
+    border-bottom: solid 1px;
+}
+    /* nav > img {
+        height: 15vh;
+    } */
+    nav h2 {
+        display: flex;
+        color: #fff;
+        margin-left: 1em;
+        /* border-style: dashed; */
+        align-items: center;
+    }
+
+
+    nav img {
+        align-self: center;        
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+
+.main-page{
+    display:flex;
+    flex-direction: column;
+    /* grid-column: 1; */
+    justify-content:flex-start;
+
+    
+} 
+
+    /* For debugging, TURNS ON the BORDER on all the DIVs */
+    .main-page > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border-style: dotted; */
+        /* border: rgb(53, 52, 52) dotted; */
+    }
