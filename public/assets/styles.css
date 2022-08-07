@@ -187,11 +187,20 @@ nav {
         padding-left: 1em;
         height: 25vh;
         border: rgb(53, 52, 52) solid 1px;
+        font-size: 1.2em;
         /* width: auto; */
         /* style="height: 25vh; width:auto; " */
     }
 
-    /* Fix for the landscape mode {breaks the height of the skillsLine */
+    /* editting */
+    .skillsLine:hover{
+        padding-left: 1.2em;
+        /* border: rgb(83, 87, 92) solid 1px; */
+        background: hsla(213, 15%, 74%, 0.377);
+        transition: 150ms background linear;
+        /* transition: 250ms border linear; */
+    }
+    /*(HEIGHT) Fix for the LANDSCAPE mode {breaks the height of the skillsLine */
     @media screen  and  (max-height: 600px){
         .skillsLine{
             height: 30vh;
@@ -206,6 +215,13 @@ nav {
     @media screen  and  (max-height: 350px){
         .skillsLine{
             height: 65vh;
+        }
+    }
+
+    /* (WIDTH) */
+    @media screen  and (min-width: 750px){
+        .skillsLine{
+            font-size: 1.4em;
         }
     }
         .skillsLine .skill-left{
