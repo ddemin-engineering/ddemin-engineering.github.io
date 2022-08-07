@@ -205,7 +205,7 @@ nav {
         padding-left: 1em;
         height: 25vh;
         border: rgb(53, 52, 52) solid 1px;
-        font-size: 1.2em;
+        font-size: 1.4em;
         /* width: auto; */
         /* style="height: 25vh; width:auto; " */
     }
@@ -240,7 +240,13 @@ nav {
     /* (WIDTH) */
     @media screen  and (max-width: 750px){
         .skillsLine a{
-            font-size: 0.9em;
+            font-size: 1em;
+        }
+    }
+
+    @media screen  and (max-width: 1000px){
+        .skillsLine a{
+            font-size: 1.2em;
         }
     }
         .skillsLine a .skill-left{
