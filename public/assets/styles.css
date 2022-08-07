@@ -10,6 +10,12 @@ ul {
     list-style-type: circle;
 }
 
+/* removes link UNDERLINE in Skill Cards and EVERYWHERE else, also removes purple color of visited page */
+a:link{text-decoration: none; color: black;}
+a:visited{text-decoration: none;color: black;}
+a:hover{text-decoration: none;color: black;}
+a:active{text-decoration: none;color: black;}
+
 nav {
     display: flex;
     /* flex-direction: row; */
@@ -87,7 +93,8 @@ nav {
         }
 
         /* animation for the background skew */
-        .main-page .intro-wrapper .backgroundSkew:hover{
+        /* :active should be enough for mobile, i think, but some solutions said to add all of these in that order */
+        .main-page .intro-wrapper .backgroundSkew:hover , .main-page .intro-wrapper .backgroundSkew:focus ,.main-page .intro-wrapper .backgroundSkew:active {
             background: hsl(218, 38%, 59%);
             transition: 250ms background linear;            
         }
@@ -179,7 +186,13 @@ nav {
         flex-direction: column;
 
     }
-    .skillsLine{
+
+
+    .skillsLine a{
+        display: flex;
+    }
+
+    .skillsLine a{
         display: flex;
         flex-direction: row;
         /* align-items: flex-start; */
@@ -193,57 +206,58 @@ nav {
     }
 
     /* editting */
-    .skillsLine:hover{
+    .skillsLine a:hover{
         padding-left: 1.2em;
         /* border: rgb(83, 87, 92) solid 1px; */
         background: hsla(213, 15%, 74%, 0.377);
         transition: 150ms background linear;
         /* transition: 250ms border linear; */
     }
+
     /*(HEIGHT) Fix for the LANDSCAPE mode {breaks the height of the skillsLine */
     @media screen  and  (max-height: 600px){
-        .skillsLine{
+        .skillsLine a{
             height: 30vh;
         }
     }
     @media screen  and  (max-height: 450px){
-        .skillsLine{
+        .skillsLine a{
             height: 40vh;
         }
     }
 
     @media screen  and  (max-height: 350px){
-        .skillsLine{
+        .skillsLine a{
             height: 65vh;
         }
     }
 
     /* (WIDTH) */
-    @media screen  and (min-width: 750px){
-        .skillsLine{
-            font-size: 1.4em;
+    @media screen  and (max-width: 750px){
+        .skillsLine a{
+            font-size: 0.9em;
         }
     }
-        .skillsLine .skill-left{
+        .skillsLine a .skill-left{
             /* border: rgb(53, 52, 52) solid; */
             flex: 1;
             font-family: 'Cormorant SC', serif;
             /* border: #000 dotted; */
             /* justify-content: left; */
         }
-        .skillsLine .skill-right{
+        .skillsLine a .skill-right{
             /* border: rgb(53, 52, 52) solid; */
             /* /* display: flex; */
             width: 50%;
             justify-content: flex-end;
         }
 
-            .skillsLine .skill-left{
+            .skillsLine a .skill-left{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            .skillsLine .skill-right img{
+            .skillsLine a .skill-right img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
