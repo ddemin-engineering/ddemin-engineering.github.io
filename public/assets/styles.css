@@ -16,6 +16,11 @@ a:visited{text-decoration: none;color: black;}
 a:hover{text-decoration: none;color: black;}
 a:active{text-decoration: none;color: black;}
 
+/* nav bar has links, but they are invisible for a person */
+#linksContainer{
+    display: none;
+}
+
 nav {
     display: flex;
     /* flex-direction: row; */
