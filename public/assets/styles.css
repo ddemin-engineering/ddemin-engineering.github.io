@@ -203,9 +203,9 @@ nav {
         /* align-items: flex-start; */
         /* object-fit: cover; */
         padding-left: 1em;
-        height: 25vh;
+        height: 30vh;
         border: rgb(53, 52, 52) solid 1px;
-        font-size: 1.4em;
+        font-size: 1.7em;
         /* width: auto; */
         /* style="height: 25vh; width:auto; " */
     }
@@ -220,41 +220,43 @@ nav {
     }
 
     /*(HEIGHT) Fix for the LANDSCAPE mode {breaks the height of the skillsLine */
-    @media screen  and  (max-height: 600px)and (min-width: 650px){
-        .skillsLine a{
-            height: 30vh;
+        @media screen  and  (max-height: 600px)and (min-width: 650px){
+            .skillsLine a{
+                height: 30vh;
+            }
         }
-    }
-    @media screen  and  (max-height: 450px)and (min-width: 650px){
-        .skillsLine a{
-            height: 60vh;
+        @media screen  and  (max-height: 450px)and (min-width: 650px){
+            .skillsLine a{
+                height: 60vh;
+            }
         }
-    }
+    
+        @media screen  and  (max-height: 350px) and (min-width: 650px){
+            .skillsLine a{
+                height: 65vh;
+            }
+        }
+    
+        /* (WIDTH) */
+        @media screen  and (max-width: 460px){
+            .skillsLine a{
+                height: 42vh;
+            }
+        }
+    
+        @media screen  and (max-width: 750px){
+            .skillsLine a{
+                font-size: 1em;
+            }
+        }
+    
+        @media screen  and (max-width: 1000px){
+            .skillsLine a{
+                font-size: 1.2em;
+            }
+        }
 
-    @media screen  and  (max-height: 350px) and (min-width: 650px){
-        .skillsLine a{
-            height: 65vh;
-        }
-    }
 
-    /* (WIDTH) */
-    @media screen  and (max-width: 460px){
-        .skillsLine a{
-            height: 42vh;
-        }
-    }
-
-    @media screen  and (max-width: 750px){
-        .skillsLine a{
-            font-size: 1em;
-        }
-    }
-
-    @media screen  and (max-width: 1000px){
-        .skillsLine a{
-            font-size: 1.2em;
-        }
-    }
 
 
         .skillsLine a .skill-left{
