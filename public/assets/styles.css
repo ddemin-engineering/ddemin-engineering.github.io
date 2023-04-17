@@ -94,6 +94,10 @@
     margin-bottom: 1rem;
     z-index: -1;
   }
+  .backgroundSkew:hover {
+    background: hsl(220, 29%, 77%);
+    transition: 250ms background linear;     
+  }
   
   .anitiSkewText {
     transform: skewY(5deg);
@@ -131,6 +135,10 @@
     /* border: solid black 0.1px; */
     z-index: 2;
   }
+  .intro2-smaller p:hover{ 
+    background: hsl(213, 31%, 48%);
+    transition: 250ms background linear;
+    }
   
   /* Info-roll styles */
   .skill-flex {
@@ -164,7 +172,14 @@
     border-style: solid;
     border-color: rgb(53, 52, 52);
   }
-  
+
+  .skillsLine a:hover{
+    padding-left: 1.2em;
+    /* border: rgb(83, 87, 92) solid 1px; */
+    background: hsla(213, 15%, 74%, 0.377);
+    transition: 150ms background linear;
+    /* transition: 250ms border linear; */
+  }
   /* .skillsLine img {
     height: 6rem;
     width: 100%;
