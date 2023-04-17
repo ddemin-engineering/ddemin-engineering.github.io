@@ -2,10 +2,6 @@
 /* @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap) */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
 
-* {
-    box-sizing: border-box;
-    
-}
 
 /* nav bar has links, but they are invisible for a person */
 #linksContainer{
@@ -18,63 +14,128 @@ a:visited{text-decoration: none;color: black;}
 a:hover{text-decoration: none;color: black;}
 a:active{text-decoration: none;color: black;}
 
+/* Mobile first */
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+    padding: 1;
+    /* border: 1px solid red; */
+    
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    
+  }
+  
+  /* Navigation bar styles */
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: hsl(218, 18%, 45%);
+    z-index: 2;
+  }
+  
+  nav img {
+    height: 3rem;
+    width: auto;
+  }
+  
+  nav h2 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 2rem;
+    color: whitesmoke;
+  }
+  
+  #linksContainer {
+    display: none;
+  }
+  
+  nav a {
+    display: none;
+    padding: 1rem;
+    color: whitesmoke;
+    z-index: 2;
+  }
+  
+
 body {
     background:  hsl(218, 18%, 80%);
     
 }
 
+
 ul {
-    list-style-type: circle;
+    list-style-type: disc;
 }
 
 nav {
-    display:flex;
-    /* border-style: solid; */
-    border-bottom: solid 1px;
-    background-color: hsl(218, 18%, 45%);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(218, 18%, 45%);
 }
 
-nav a{
-    display: flex;
-    /* flex-direction: row; */
-    padding: 0.75em;
-    justify-items: flex-start;
-    height: 15vh;
-    font-family: 'Cormorant SC', serif;
+nav a {
+  display: flex;
+  height: 3rem;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1rem; */
+  background-color: hsl(218, 18%, 45%);
+  z-index: 2;
 }
-    /* nav > img {
-        height: 15vh;
-    } */
-    nav a h2 {
-        display: flex;
-        color: #fff;
-        margin-left: 1em;
-        /* border-style: dashed; */
-        align-items: center;
-    }
+
+nav a img {
+  height: 3rem;
+  width: auto;
+  object-fit: cover;
+}
+
+nav a h2 {
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  margin-left: 1em;
+  font-family: 'Cormorant SC', serif;
+}
 
 
-    nav a img {
-        align-self: center;        
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-    }
 
-.main-page{
-    display:flex;
-    flex-direction: column;
-    /* grid-column: 1; */
-    justify-content:flex-start;
+/* Main page styles */
+.main-page {
+  padding: 1rem;
+  background-color: white;
 
-    
-} 
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  
+}
 
-    /* For debugging, TURNS ON the BORDER on all the DIVs */
-    .main-page > div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* border-style: dotted; */
-        /* border: rgb(53, 52, 52) dotted; */
-    }
+
+
+@media (max-width: 768px) {
+
+
+  /* Adjust the padding for the links container */
+  #linksContainer {
+    padding: 5px 10px;
+  }
+
+  /* Adjust the font size for the links in the container */
+  #linksContainer a {
+    font-size: 14px;
+  }
+}
+
