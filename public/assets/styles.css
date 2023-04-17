@@ -277,6 +277,7 @@
     margin-bottom: 0.5rem;
   }
 
+
   .certificate-wrapper,
   .warning-wrapper{
     display: flex;
@@ -287,6 +288,9 @@
 
     position: relative;
     z-index: 2;
+  }
+  .warning-wrapper{
+    display: none;
   }
  
 /* Media queries for smaller screens */
