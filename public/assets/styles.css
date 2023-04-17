@@ -1,293 +1,256 @@
-/* @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap) */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+/* Mobile first */
 
+/* General styles */
 * {
     box-sizing: border-box;
-
-}
-
-ul {
-    list-style-type: circle;
-}
-
-/* removes link UNDERLINE in Skill Cards and EVERYWHERE else, also removes purple color of visited page */
-a:link{text-decoration: none; color: black;}
-a:visited{text-decoration: none;color: black;}
-a:hover{text-decoration: none;color: black;}
-a:active{text-decoration: none;color: black;}
-
-/* nav bar has links, but they are invisible for a person */
-#linksContainer{
-    display: none;
-}
-
-nav {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    
+  }
+  
+  /* Navigation bar styles */
+  nav {
+    position: relative;
     display: flex;
-    /* flex-direction: row; */
-    padding: 0.75em;
-    justify-items: flex-start;
-    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
     background-color: hsl(218, 18%, 45%);
-
+    z-index: 2;
+  }
+  
+  nav img {
+    height: 3rem;
+    width: auto;
+  }
+  
+  nav h2 {
     font-family: 'Cormorant SC', serif;
+    font-size: 2rem;
+    color: whitesmoke;
+  }
+  
+  #linksContainer {
+    display: none;
+  }
+  
+  nav a {
+    display: none;
+    padding: 1rem;
+    color: whitesmoke;
+    z-index: 2;
+  }
+  
+  /* Hamburger menu styles
+  .hamburger {
+    display: block;
+    padding: 1rem;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  } */
+  
+  /* This cancels flex from .main-page allowing the full width */
+  .main-page > .skillCardBanner , .intro-wrapper {
+    width: 100%;
+  }
+  /* Main page styles */
+  .main-page {
+    padding: 1rem;
 
-    /* border-style: solid; */
-    border-bottom: solid 1px;
-}
-    /* nav > img {
-        height: 15vh;
-    } */
-    nav h2 {
-        display: flex;
-        color: #fff;
-        margin-left: 1em;
-        /* border-style: dashed; */
-        align-items: center;
-    }
-
-
-    nav img {
-        align-self: center;        
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-    }
-
-.main-page{
-    display:flex;
+    display: flex;
     flex-direction: column;
-    /* grid-column: 1; */
-    justify-content:flex-start;
+    align-items: center;
+  
+  }
+  
+  
+  /* Introduction section styles */
+  .intro-wrapper {
+    text-align: center;
+    padding: 2em 0em 1em 0em;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1; /* Add this to ensure other elements are in front */
+  }
+  
+  .backgroundSkew {
+    position: relative;
+    background-color: hsl(218, 18%, 80%);
+    transform: skewY(-5deg);
+    margin-bottom: 1rem;
+    z-index: -1;
+  }
+  
+  .anitiSkewText {
+    transform: skewY(5deg);
+    font-size: 3rem;
+    font-family: 'Cormorant SC', serif;
+    color: hsl(218, 18%, 45%);
+    padding: 1rem;
+    z-index: 2;
+  }
+  
+  .intro2-smaller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    z-index: 2;
+  }
+  
+  .intro2-smaller p {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+    background-color: hsla(218, 18%, 45%, 0.555);
+    border-radius: 3px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
+    /* border: solid black 0.1px; */
+    z-index: 2;
+  }
+  
+  /* Info-roll styles */
+  .skill-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 2rem;
+  }
+  
+  /* .skillsLine * {
+    border: 1px solid red;
+  }
+   */
 
-    
-} 
+  .skillsLine {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .skillsLine a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(218, 18%, 80%);
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* .skillsLine img {
+    height: 6rem;
+    width: 100%;
+    object-fit: cover;
+  } */
 
-    /* For debugging, TURNS ON the BORDER on all the DIVs */
-    .main-page > div{
-        display: flex;
-        flex-direction: column;
+  
+  .skill-left {
+    width: 50%;
+    /* max-width: 50%; */
+    padding-right: 1rem;
+    padding-left: 1rem;
+    box-sizing: border-box;
 
-        /* border-style: dotted; */
-        /* border: rgb(53, 52, 52) dotted; */
-    }
-    
-    /* INTRO:  All intro here, from Hi! My name .. to ..dev in free time */
-    .main-page .intro-wrapper{
-        /* padding-top: 16em; */
-        padding: 10vh 4vh 2vh 4vh;
-        font-size: 3em;
-        text-shadow: 2px 2px #000 ;
-        color:#fff;
-        font-family: 'Cormorant SC', serif;
-        background:  hsl(218, 18%, 80%);
-    }
-
-        
-        .main-page .intro-wrapper .backgroundSkew{
-            background: hsl(218, 18%, 45%);
-            max-width: 800px; 
-
-            margin-inline: 0.25em;
-            
-            -ms-transform: skewX(20deg); /* IE 9 */
-            -webkit-transform: skewX(20deg); /* Safari */
-            transform: skewX(20deg);
-
-            /* border-style: ; */
-            border-bottom: #000 solid 1px;
-        }
-
-        /* animation for the background skew */
-        /* :active should be enough for mobile, i think, but some solutions said to add all of these in that order */
-        .main-page .intro-wrapper .backgroundSkew:hover , .main-page .intro-wrapper .backgroundSkew:focus ,.main-page .intro-wrapper .backgroundSkew:active {
-            background: hsl(218, 38%, 59%);
-            transition: 250ms background linear;            
-        }
-    
-    .anitiSkewText {
-        
-        -ms-transform: skewX(-20deg); /* IE 9 */
-        -webkit-transform: skewX(-20deg); /* Safari */
-        transform: skewX(-20deg);
-        padding: 20px
-        
-        
-    }
-    
-    
-    
-    /* whole second part of intro */
-    .main-page .intro-wrapper > div:not(:first-child) {
-        color:#000;
-        text-shadow: none;
-        display: flex; 
-        flex-direction: column; 
-        font-size: 0.5em;
-    }
-
-    /* I'm a mechatronic systems engineering ... */
-    .intro2-smaller p{ 
-        align-self: start;
-        border: rgb(53, 52, 52) solid 1px;
-        box-shadow: 0.25em 0.25em rgb(53, 52, 52);
-        /* border: rgb(53, 52, 52) dotted; */
-    }
-        .intro2-smaller p:hover{ 
-            background: hsl(213, 12%, 85%);
-            transition: 250ms background linear;
-        }
-
-    /* and a developer in my free time {on the right side} */
-    .intro2-smaller p:last-of-type {
-        align-self: flex-end;
-        /* justify-self: flex-end; */
-        border: rgb(53, 52, 52) solid 1px;
-        box-shadow: 0.25em 0.25em rgb(53, 52, 52);
-    }
-        .intro2-smaller p:last-of-type:hover {
-            background: hsl(213, 12%, 85%);
-            transition: 250ms background linear;
-        }
-
-
-    /* WARNING SIGN */
-    .warning-wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-inline: 6em;
-        padding-block: 3em;
-        height: 35vh;
-        
-        background-color: hsl(218, 18%, 75%);
-
-        /* border-style:inset; */
-        border-color: green;
-        /* border-radius: 25%; */
-        border-width: 0.1em;
-        /* grid justify-center justify-items-center py-6 px-4   */
     }
 
-    .warning-wrapper img{
-        width: 100%;
+    .skill-right {
+        width: 50%;
         height: 100%;
-        object-fit: contain;
-    }
-
-    .main-page .certificate-wrapper{
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+      }
+      
+      .skillsLine .skill-right img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        /* max-width: 10rem; set the maximum width for the image */
+      }
+      
+      /* .skill-right img {
+        height: 70%;
+        width: auto;
+        object-fit: con; */
+      
+      
+  .skill-left h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-left ul {
+    list-style: none;
+  }
+  
+  .skill-left ul li {
+    margin-bottom: 0.5rem;
+  }
 
-        padding-block: 1em;
-        /* grid justify-items-center  */
+  .warning-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+ 
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+
+    /* Adjust the font size and padding for the top banner text */
+    .anitiSkewText {
+      font-size: 28px;
+      padding: 15px 10px;
+    }
+  
+    /* Adjust the font size for the intro text */
+    .intro2-smaller p {
+      font-size: 16px;
+    }
+  
+    .skill-left {
+        width: 100%;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+    /* Adjust the font size for the skill titles */
+    .skill-left h1 {
+      font-size: 20px;
+    }
+  
+    /* Adjust the font size for the skill description */
+    .skill-left li {
+      font-size: 14px;
+    }
+  
+    .skill-right {
+        width: 50%;
     }
 
-
-    .skill-flex{
-        display: flex;
-        flex-direction: column;
-
+    /* Decrease the size of the skill images */
+    .skill-right img {
+      max-width: 100%;
+      height: auto;
     }
-
-
-    .skillsLine a{
-        display: flex;
+  
+    /* Adjust the padding for the links container */
+    #linksContainer {
+      padding: 5px 10px;
     }
-
-    .skillsLine a{
-        display: flex;
-        flex-direction: row;
-        /* align-items: flex-start; */
-        /* object-fit: cover; */
-        padding-left: 1em;
-        height: 30vh;
-        border: rgb(53, 52, 52) solid 1px;
-        font-size: 1.7em;
-        /* width: auto; */
-        /* style="height: 25vh; width:auto; " */
+  
+    /* Adjust the font size for the links in the container */
+    #linksContainer a {
+      font-size: 14px;
     }
-
-    /* editting */
-    .skillsLine a:hover{
-        padding-left: 1.2em;
-        /* border: rgb(83, 87, 92) solid 1px; */
-        background: hsla(213, 15%, 74%, 0.377);
-        transition: 150ms background linear;
-        /* transition: 250ms border linear; */
-    }
-
-    /*(HEIGHT) Fix for the LANDSCAPE mode {breaks the height of the skillsLine */
-        @media screen  and  (max-height: 600px)and (min-width: 650px){
-            .skillsLine a{
-                height: 30vh;
-            }
-        }
-        @media screen  and  (max-height: 450px)and (min-width: 650px){
-            .skillsLine a{
-                height: 60vh;
-            }
-        }
-    
-        @media screen  and  (max-height: 350px) and (min-width: 650px){
-            .skillsLine a{
-                height: 65vh;
-            }
-        }
-    
-        /* (WIDTH) */
-        @media screen  and (max-width: 460px){
-            .skillsLine a{
-                height: 42vh;
-            }
-        }
-    
-        @media screen  and (max-width: 750px){
-            .skillsLine a{
-                font-size: 1em;
-            }
-        }
-    
-        @media screen  and (max-width: 1000px){
-            .skillsLine a{
-                font-size: 1.2em;
-            }
-        }
-
-
-
-
-        .skillsLine a .skill-left{
-            /* border: rgb(53, 52, 52) solid; */
-            flex: 1;
-            font-family: 'Cormorant SC', serif;
-            /* border: #000 dotted; */
-            /* justify-content: left; */
-        }
-        .skillsLine a .skill-right{
-            /* border: rgb(53, 52, 52) solid; */
-            /* /* display: flex; */
-            width: 50%;
-            justify-content: flex-end;
-        }
-
-            .skillsLine a .skill-left{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            .skillsLine a .skill-right img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            /* This works when hovering above ID: MECHANICAL */
-/*       
-        .skillsLine:hover #mechanical .skill-right img{
-            background: url("public/assets/skillsIMG/electronic.jpg") no-repeat;
-
-            src:"public/assets/skillsIMG/electronic.jpg"; 
-        }    */
+  }
+  

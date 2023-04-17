@@ -10,35 +10,30 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
 
-    <!-- Fonts font-family: 'Cormorant SC', serif;
-      font-family: 'Quicksand', sans-serif;
-      font-family: 'Roboto', sans-serif; -->
       <link rel="preconnect" href="https://fonts.googleapis.com"> 
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap">
       <link href="public/assets/styles.css" rel="stylesheet">
 
-    <!-- <link href=
-"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" 
-          rel="stylesheet">  -->
     <title>DDemin-Engineering</title>
 </head>
 <body >
-    <!-- This example requires Tailwind CSS v2.0+ -->
-    <!-- This is a Nav bar  -->
+
 <nav>
 
   <img  src="./public/assets/svgLogoinverted.svg" alt="logo">
   <h2>DDemin-Engineering</h2>
 
   <div id="linksContainer">
-    <a href="./mechanical.html">Mechanical</a><a href="./electrical.html">Electrical</a><a href="./systems.html">Systems</a><a href="./programming.html">Programming</a>
+    <a href="./pages/mechanical.html">Mechanical</a>
+    <a href="./pages/electrical.html">Electrical</a>
+    <a href="./pages/systems.html">Systems</a>
+    <a href="./pages/programming.html">Programming</a>
   </div>
 </nav>
 
 <!-- Flex for 1 column site -->
 <div class="main-page" >
-<!-- <div class="flex justify-content:center "> -->
   
   <!-- 1. Top thing you see. "Hi! I'm Dmitry Demin etc etc" -->
   <div class="intro-wrapper">
@@ -62,24 +57,26 @@
 
   </div>
   
-  <div style="padding: 1em 0em 0em 0em; background:  hsl(218, 18%, 80%);">
+  <div class="skillCardBanner">
     <div style="display:flex; align-self: left;">
 
       <div style="display:flex;        align-self: flex-start;
-      border: rgb(53, 52, 52) solid 1px;
-      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: medium; position: relative; color:whitesmoke;  background: hsl(218, 18%, 45%); outline: 2px ;">Click on Skill Cards below!</div>
-    </div>
+      border: rgb(53, 52, 52) solid 1px; 
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+      font-size: medium; position: relative; color:whitesmoke;  
+      background: hsl(218, 18%, 45%); outline: 2px ;">
+      Click on Skill Cards below!
+      </div>
+  </div>
 
   </div>
 
   
   <!-- Info-roll : Skills -->
-  <!-- Info-roll : Skills -->
   <div class="skill-flex">
     <section class="skillsLine" >
-     <a href="./mechanical.html">
+     <a href="./pages/mechanical.html">
         <!-- Skill: Mechanical -->
-        <!-- <div id="mechanical" style="display:flex;"> -->
           <div class="skill-left">
             <h1>Mechanical</h1>
             <ul >
@@ -96,7 +93,7 @@
     </section>
     
     <section class="skillsLine" >
-      <a href="./electrical.html">
+      <a href="./pages/electrical.html">
         <div class="skill-left">
           <h1>Electrical</h1>
           <ul >
@@ -113,24 +110,24 @@
     
     <!-- Info-roll : Skills -->
     <section class="skillsLine" >
-      <a href="./systems.html">
-      <div class="skill-left">
-        <h1>Systems</h1>
-        <ul >
-          <li>System Modeling</li>
-          <li>Feedback Control</li>
-          <li>Stability and Robustness</li>
-        </ul>
-      </div>
-      <div class="skill-right">
-        <img src="public/assets/skillsIMG/system.jpg">
-      </div>
+      <a href="./pages/systems.html">
+        <div class="skill-left">
+          <h1>Systems</h1>
+          <ul >
+            <li>System Modeling</li>
+            <li>Feedback Control</li>
+            <li>Stability and Robustness</li>
+          </ul>
+        </div>
+        <div class="skill-right">
+          <img src="public/assets/skillsIMG/system.jpg">
+        </div>
       </a>
     </section>
     
     <!-- Info-roll : Skills -->
     <section class="skillsLine" >
-      <a href="./programming.html">
+      <a href="./pages/programming.html">
       <div class="skill-left">
         <h1>Programming</h1>
         <ul >
