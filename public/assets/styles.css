@@ -58,8 +58,9 @@
   } */
   
   /* This cancels flex from .main-page allowing the full width */
-  .main-page > .skillCardBanner , .intro-wrapper {
+  .main-page > .skillCardBanner , .intro-wrapper  {
     width: 100%;
+
   }
   /* Main page styles */
   .main-page {
@@ -76,31 +77,58 @@
   .intro-wrapper {
     text-align: center;
 
-    
-    
     color: rgb(95, 113, 151);
     font-family: "Cormorant SC", serif;
 
     padding: 2em 0em 1em 0em;
     margin-bottom: 2rem;
     position: relative;
-    z-index: 1; /* Add this to ensure other elements are in front */
+    z-index: 1; /*Add this to ensure other elements are in front*/
   }
   
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   .backgroundSkew {
-    position: relative;
-    background-color: hsl(218, 18%, 80%);
-    transform: skewY(-5deg);
-    margin-bottom: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* position: absolute; */
+    /* top: 25%; */
+    /* left: 25%; */
+    /* transform: translate(-50%, -50%); */
+    
+    /* background-color: hsla(217, 18%, 80%, 0.397); */
+    /* transform: skewY(-5deg); */
+    /* margin-bottom: 1rem; */
     z-index: -1;
+
+    /* width: 1000px; */
+    /* height: 1000px; */
+    /* background-color: rgb(86, 86, 116); */
+
+    /* border-radius: 10px; */
+    /* transform-origin: center center; */
+    animation: rotate 2s linear infinite;
+
+  }
+  /* Fanblades image */
+  .backgroundSkew img{
+    transform: scale(1.5);
   }
   .backgroundSkew:hover {
-    background: hsl(220, 29%, 77%);
+    background: hsla(219, 29%, 77%, 0.664);
     transition: 250ms background linear;     
   }
   
   .anitiSkewText {
-    transform: skewY(5deg);
+    /* transform: skewY(5deg); */
     font-size: 3rem;
     font-family: 'Cormorant SC', serif;
     /* text-shadow: rgb(173, 173, 175) 1.3px 1.3px; */
@@ -113,7 +141,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+    width: 100%;
     z-index: 2;
   }
   
@@ -133,14 +161,18 @@
     border-style: solid;
     border-color: rgb(53, 52, 52);
     /* border: solid black 0.1px; */
-    z-index: 2;
+    /* z-index: 2; */
   }
   .intro2-smaller p:hover{ 
     background: hsl(213, 31%, 48%);
     transition: 250ms background linear;
     }
+
+    .skillCardBanner{
+        position: relative;
+        z-index: 2;
+    }
   
-  /* Info-roll styles */
   .skill-flex {
     display: flex;
     flex-wrap: wrap;
@@ -171,6 +203,9 @@
     border-width: 1px;
     border-style: solid;
     border-color: rgb(53, 52, 52);
+
+    position: relative;
+    z-index: 1; /* Add this to ensure other elements are in front */
   }
 
   .skillsLine a:hover{
@@ -231,6 +266,7 @@
     margin-bottom: 0.5rem;
   }
 
+  .certificate-wrapper,
   .warning-wrapper{
     display: flex;
     flex-direction: column;
@@ -244,7 +280,7 @@
 
     /* Adjust the font size and padding for the top banner text */
     .anitiSkewText {
-      font-size: 28px;
+      font-size: 2.5em;
       padding: 15px 10px;
     }
   
