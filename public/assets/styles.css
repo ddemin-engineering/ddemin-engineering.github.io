@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
+    
   }
   
   body {
@@ -69,7 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+    
   }
   
   
@@ -84,6 +85,7 @@
     margin-bottom: 2rem;
     position: relative;
     z-index: 1; /*Add this to ensure other elements are in front*/
+    
   }
   
 
@@ -99,27 +101,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    /* position: absolute; */
-    /* top: 25%; */
-    /* left: 25%; */
-    /* transform: translate(-50%, -50%); */
-    
-    /* background-color: hsla(217, 18%, 80%, 0.397); */
-    /* transform: skewY(-5deg); */
-    /* margin-bottom: 1rem; */
+
     z-index: -1;
 
-    /* width: 1000px; */
-    /* height: 1000px; */
-    /* background-color: rgb(86, 86, 116); */
-
-    /* border-radius: 10px; */
-    /* transform-origin: center center; */
     animation: rotate 2s linear infinite;
 
+    top:25%;
+    width: 60%;
+    /* height: 50%; */
   }
   /* Fanblades image */
   .backgroundSkew img{
+    max-width: 100%; 
+    max-height: 100%;
     transform: scale(1.5);
   }
   .backgroundSkew:hover {
@@ -168,9 +162,25 @@
     transition: 250ms background linear;
     }
 
+
     .skillCardBanner{
+
+        display:flex; 
+        align-self: left;
+        
+       
+    }
+
+    .skillCardBanner div{
         position: relative;
         z-index: 2;
+
+        display:flex; 
+        /* align-self: left; */
+        border: rgb(53, 52, 52) solid 1px; 
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+        font-size: medium; position: relative; color:whitesmoke;  
+        background: hsl(218, 18%, 45%); outline: 2px ;
     }
   
   .skill-flex {
@@ -278,6 +288,20 @@
 /* Media queries for smaller screens */
 @media (max-width: 768px) {
 
+    .main-page{
+        overflow: hidden;
+    }
+    .backgroundSkew{
+        /* top: 25%; */
+        width: 80%;
+        
+      }
+
+    .backgroundSkew img{
+        
+        transform: scale(2);
+    }
+
     /* Adjust the font size and padding for the top banner text */
     .anitiSkewText {
       font-size: 2.5em;
@@ -324,3 +348,10 @@
     }
   }
   
+
+  @media (max-width: 475px) {
+
+    .main-page{
+        overflow: hidden;
+    }
+  }
