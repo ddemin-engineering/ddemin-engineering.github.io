@@ -1,0 +1,355 @@
+/* Mobile first */
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    
+    background-image: url("./landscape-with-windmills.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+  }
+  
+  /* Navigation bar styles */
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    z-index: 2;
+  }
+  
+  nav img {
+    height: 4rem;
+    width: auto;
+  }
+  
+  nav h2 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 2rem;
+    color: whitesmoke;
+  }
+
+  
+  #linksContainer {
+    display: none;
+  }
+  
+  nav a {
+    display: none;
+    padding: 1rem;
+    color: whitesmoke;
+    z-index: 2;
+  }
+  
+  /* Hamburger menu styles
+  .hamburger {
+    display: block;
+    padding: 1rem;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  } */
+  
+  /* This cancels flex from .main-page allowing the full width */
+  .main-page > .skillCardBanner , .intro-wrapper  {
+    width: 100%;
+
+  }
+  /* Main page styles */
+  .main-page {
+    padding: 1rem;
+
+    /*background-color: white;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  
+  /* Introduction section styles */
+  .intro-wrapper {
+    text-align: center;
+
+    color: rgb(95, 113, 151);
+    font-family: "Cormorant SC", serif;
+
+
+    padding: 5em 0em 1em 0em;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1; /*Add this to ensure other elements are in front*/
+    
+  }
+  
+
+/*Main text on center page*/
+  .anitiSkewText {
+    /* transform: skewY(5deg); */
+/*#    font-size: 3rem;
+#    font-family: 'Cormorant SC', serif;
+#    /* text-shadow: rgb(173, 173, 175) 1.3px 1.3px; 
+#    /* color: hsl(218, 18%, 45%); 
+#    padding: 1rem;
+#    z-index: 2; */
+    color: #222;
+    letter-spacing: 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    /*font-family: 'IBM Plex Sans', sans-serif;*/
+
+    font-family: 'Playfair Display', serif;
+    /*font-family: Superior title, Times New Roman, sans-serif;*/
+    font-size: 7em;
+    font-weight: 700;
+    line-height: 88px;
+    color: whitesmoke;
+    text-shadow: #222 7px 0 10px;
+}
+  
+  .intro2-smaller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .intro2-smaller p {
+    font-size: 1.3em;
+    /* font-weight: bold; */
+    color: rgb(255, 255, 255);
+
+    padding: 5px;
+    margin: 0;
+    background-color: hsl(218, 18%, 45%);
+    /* border-radius: 3px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05); */
+
+    box-shadow: rgb(53, 52, 52) 0.25em 0.25em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(53, 52, 52);
+    /* border: solid black 0.1px; */
+    /* z-index: 2; */
+  }
+
+  .intro2-smaller p:hover{ 
+    background: hsl(213, 31%, 48%);
+    transition: 250ms background linear;
+    }
+
+
+    .skillCardBanner{
+        display:flex; 
+        align-self: left;
+    }
+
+    .skillCardBanner div{
+        position: relative;
+        z-index: 2;
+
+        display:flex; 
+        /* align-self: left; */
+        border: rgb(53, 52, 52) solid 1px; 
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+        font-size: medium; position: relative; color:whitesmoke;  
+        background: hsl(218, 18%, 45%); outline: 2px ;
+    }
+  
+  .skill-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 2rem;
+  }
+  
+  /* .skillsLine * {
+    border: 1px solid red;
+  }
+   */
+
+  .skillsLine {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .skillsLine a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(218, 18%, 80%);
+    text-decoration: none;
+    color: #333;
+
+    box-shadow: rgb(53, 52, 52) 0.25em 0.25em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(53, 52, 52);
+
+    position: relative;
+    z-index: 1; /* Add this to ensure other elements are in front */
+  }
+
+  .skillsLine a:hover{
+    padding-left: 1.2em;
+    /* border: rgb(83, 87, 92) solid 1px; */
+    background: hsla(213, 15%, 74%, 0.377);
+    transition: 150ms background linear;
+    /* transition: 250ms border linear; */
+  }
+  /* .skillsLine img {
+    height: 6rem;
+    width: 100%;
+    object-fit: cover;
+  } */
+
+  
+  .skill-left {
+    width: 50%;
+    /* max-width: 50%; */
+    padding-right: 1rem;
+    padding-left: 1rem;
+    box-sizing: border-box;
+
+    }
+
+    .skill-right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .skillsLine .skill-right img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        /* max-width: 10rem; set the maximum width for the image */
+      }
+      
+      /* .skill-right img {
+        height: 70%;
+        width: auto;
+        object-fit: con; */
+      
+      
+  .skill-left h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-left ul {
+    list-style: none;
+  }
+  
+  .skill-left ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+
+  .certificate-wrapper,
+  .warning-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: whitesmoke;
+
+    position: relative;
+    z-index: 2;
+  }
+  .warning-wrapper{
+    display: none;
+  }
+ 
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+
+    .main-page{
+        overflow: hidden;
+    }
+    .backgroundSkew{
+        /* top: 25%; */
+        width: 80%;
+        
+      }
+
+    .backgroundSkew img{
+        
+        transform: scale(2);
+    }
+
+    /* Adjust the font size and padding for the top banner text */
+    .anitiSkewText {
+      font-size: 5em;
+      padding: 15px 10px;
+    }
+  
+    /* Adjust the font size for the intro text */
+    .intro2-smaller p {
+      font-size: 1.3em;
+    }
+  
+    .skill-left {
+        width: 100%;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+    /* Adjust the font size for the skill titles */
+    .skill-left h1 {
+      font-size: 2rem;
+    }
+  
+    /* Adjust the font size for the skill description */
+    .skill-left li {
+      font-size: 1.2em;
+    }
+  
+    .skill-right {
+        width: 50%;
+    }
+
+    /* Decrease the size of the skill images */
+    .skill-right img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Adjust the padding for the links container */
+    #linksContainer {
+      padding: 5px 10px;
+    }
+  
+    /* Adjust the font size for the links in the container */
+    #linksContainer a {
+      font-size: 14px;
+    }
+  }
+  
+
+  @media (max-width: 475px) {
+
+    .main-page{
+        overflow: hidden;
+    }
+  }

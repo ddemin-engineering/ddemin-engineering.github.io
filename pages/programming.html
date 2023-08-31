@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Using this you won't get a cached version of your page.-->
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- Fonts font-family: 'Cormorant SC', serif;
+        font-family: 'Quicksand', sans-serif;
+        font-family: 'Roboto', sans-serif; -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap">
+        <link href="pagesStyles/pagestyles.css" rel="stylesheet">
+    
+    <title>DD:/Programming</title>
+</head>
+<body>
+    <!-- This is a Nav bar  -->
+     <nav>
+        <a href="../index.html">
+            <img  src="../public/assets/centered_arrow_250px.png" alt="logo">
+            <h2>DDemin-Engineering</h2>
+        </a>
+
+        <div id="linksContainer">
+            <a href="./mechanical.html">Mechanical</a><a href="./electrical.html">Electrical</a><a href="./systems.html">Systems</a><a href="./programming.html">Programming</a>
+        </div>
+    </nav>
+    <!-- Flex for 1 column site -->
+    <div class="main-page" >
+        <div>
+            <h1>DD:/Programming</h1>
+
+            </br>
+            <!-- ----------------------------------------------------------------------------- -->
+            <h2>Animation for a digital clock</h2>
+            <style>
+            clock_body {
+                background-color:#81b1fd;
+                margin: 0;
+                padding: 2.7em;
+                height: 100%;
+                overflow: hidden;
+            }
+            
+            clock_body {
+            
+                display: flex;
+                /* background-color: blueviolet; */
+                align-items: center;
+                justify-content: center;
+            
+            }
+            
+            #cnv-background {
+                position: absolute;
+                /* background-color: greenyellow; */
+            
+            }
+            
+            #time {
+                /* background-color: blue;  */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+             
+            }
+            
+            p {
+                font-size: 2.5em;
+                font-family: 'Trebuchet MS', sans-serif; 
+                align-items: center;
+                justify-content: center;
+                /* background-color: aqua; */
+                z-index: 100;
+            }
+            </style>
+            
+            
+            <clock_body>
+                <div id="cnv-background">
+                    <canvas id="canvas"></canvas>
+                
+                </div>
+                
+                <div id="time">
+                
+                <p id="digital-clock">hh:mm:ss</p>
+                
+                </div>
+                
+            </clock_body>
+            
+            <script>
+            function init(canvas){
+                //Make canvas size of window.clock_body.width and window.clock_body.height
+                
+                canvas.width = document.querySelector("body > div > div > clock_body").clientWidth;
+                canvas.height = document.querySelector("body > div > div > clock_body").clientHeight;
+            
+            }
+            
+            
+            function digitalClock(){
+            // digital clock 
+            document.getElementById("digital-clock").innerHTML
+                 = new Date().toTimeString().slice(0,8) ;
+            }
+            
+            function arcAnimation(posX, posY, radius, startAngle, endAngle, lineWidth){
+                //PotOpt linewidth(Potential Optimization)
+               ctx.lineWidth =lineWidth;
+               ctx.lineCap = 'round';
+            
+               endAngle -= offset;
+            
+               ctx.beginPath();
+               ctx.arc(posX, posY, radius, startAngle, endAngle); 
+               ctx.strokeStyle = gradient;
+               ctx.stroke(); 
+               ctx.closePath();
+            }
+            
+            function clock_main(){
+               // 2*PI / minutes (in an hour there is 60 minutes)
+               // there are 12 hours (use % to get that out of 24hrs)
+               // 2*PI / (12 (hr) * 60 [mins]) 
+               // (getHours()%12)*60 [mins] + getMinutes() * {the PI/min formula above} [mins])
+               let endAngle = ((new Date().getHours()%12)*60 + (new Date().getMinutes())) 
+                    * Math.PI / 360;
+               arcAnimation(canvas.width/2, canvas.height/2, radius_main, startAngle, endAngle, 12); 
+            }
+            
+            function clock_seconds(){
+               // for seconds: we need a piece of circle per second 
+               let endAngle = (new Date().getSeconds()) * Math.PI/30; 
+               arcAnimation(canvas.width/2 - radius_main-30,canvas.height/2 -radius_main+40, radius_seconds, startAngle, endAngle, 8);
+            }
+            
+            //----------------------------------------------------------------
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            //PotOpt (variables)=> into class?
+            //Bigger clock
+            const radius_main = 100;
+            const offset = Math.PI / 2;
+            const startAngle = -offset;
+            
+            const radius_seconds = 30; 
+            
+            //const gradPos = [canvas.width/2 - radius_main, canvas.height/2 - radius_main, canvas.width/2 + radius_main, canvas.height/2 + radius_main]; 
+            const gradPos = [0 ,0, 1100, canvas.height];
+            const gradient = ctx.createLinearGradient(...gradPos);
+            gradient.addColorStop(0, '#2516A3');
+            gradient.addColorStop(1, '#f91f1f');
+            // gradient.addColorStop(1, '#f91f1f');
+            
+            init(canvas);
+            
+            setInterval(()=>{
+                digitalClock();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                clock_main();
+                clock_seconds();
+            },1000);
+            </script>
+            
+            <!-- ---------------------------------------------------------------------------------- -->
+
+            </br>
+            <h2>Embedded Lunar Landing Game, SFU</h2>
+                <ul>
+                    <li>Developed a Lunar Landing game on an embedded platform such as TivaC + Nokia 5110 LCD with a small team, managing the scope of work, as well as the limitations of the platform, that resulted in meeting the deadline with extra features shipped.</li>
+                    <li>Used ARM Keil uVision as a coding environment to write well-commented code in C.</li>
+                </ul>
+                <div class="image-container">
+                    <img src="../public/assets/projectsIMG/lunar/lunarGif.gif">
+                </div>
+            </br>
+            <h2>Web Development and Network Communications</h2>
+            <ul>
+                <li>Using the OSI model, TCP/IP, and Sockets to create a small network and ping computers for testing</li>
+                <li>Use of Tailwind CSS and Pixi.js in building a personal website to improve the UI and functionality.</li>
+                <li>Launched my website on GitHub and remade it with classic CSS.</li>
+            </ul>
+
+            </br>
+            <h2>Python Web Scrapper and File Automation</h2>
+            <ul>
+                <li>Use of Selenium and beautifulsoup4 for browser login automation and scraping.</li>
+                <li>Effective use of external Python libraries to automate tasks on Windows through Command line/PowerShell/Bash scripts.</li>
+                <li>Successful scraping of song lyrics websites to find lyrics of the forgotten song.</li>
+                <li>Cover Letter automation through scraping online information from the job posting, parsing it into Excel through Pandas, and finally adopting external data in MS Word; code on GitHub. </li>
+            </ul>
+
+            </br>
+            <h2>Industrial Control System of a Mixer</h2>
+            <ul>
+                <li>Ladder logic programming of a PLC (Simulation) with feedback control for the Industrial Mixer in PSIM to account for any failures due to mistakes in coding and produce a robust system that can reach a steady state quickly.</li>
+            </ul>
+            <div class="image-container">
+                <img src="../public/assets/projectsIMG/industrialControlPLC.jpg">
+            </div>
+
+            </br>
+            <h2>LabView Oscilloscope and DTMF decoder</h2>
+            <ul>
+                <li>Developed UI/UX, including the logic behind the Dial Tone Modulation Frequency decoder and Oscilloscope implemented in LabView with a small group of teammates</li>
+                <li>Implemented multiple file formats as input for spectral and Fast Fourier Transform frequency analysis; (allowed: .wav, .csv, microphone.)</li>
+                <li>Added an option to choose between Real-time and data file analysis</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="../public/assets/projectsIMG/LabViewOsciloscope.JPG">
+                <img src="../public/assets/projectsIMG/DTMFdecoder.jpg">
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

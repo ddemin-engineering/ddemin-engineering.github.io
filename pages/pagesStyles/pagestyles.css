@@ -1,0 +1,157 @@
+
+/* @import url(https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Quicksand:wght@300;400&family=Roboto&display=swap) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+
+
+/* nav bar has links, but they are invisible for a person */
+#linksContainer{
+    display: none;
+}
+
+/* removes link UNDERLINE in Skill Cards and EVERYWHERE else, also removes purple color of visited page */
+a:link{text-decoration: none; color: black;}
+a:visited{text-decoration: none;color: black;}
+a:hover{text-decoration: none;color: black;}
+a:active{text-decoration: none;color: black;}
+
+/* Mobile first */
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    padding: 1;
+    /* border: 1px solid red; */
+    
+  }
+
+html, body {
+  margin: 0%;
+  min-height: 100%;
+}
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    
+    background: rgb(215,124,14);
+    background: linear-gradient(0deg, rgba(215,124,14,1) 0%, rgba(213,180,95,1) 25%, rgba(184,181,181,1) 100%);
+  }
+   
+  /* Navigation bar styles */
+  nav {
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  #linksContainer {
+    display: none;
+  }
+
+  nav a {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+ }
+ 
+  nav a img {
+    height: 4em;
+    width: auto;
+    object-fit: cover;
+  }
+
+  nav a h2 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 2rem;
+    color: whitesmoke;
+  }
+
+ul {
+    list-style-type: disc;
+}
+
+
+/* Main page styles */
+.main-page {
+  padding: 1rem;
+  
+  display: flex;
+  flex-direction: column;
+  
+  overflow: hidden;
+  
+}
+
+.main-page img{
+  min-width: 40%;
+  max-width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s all ease-in-out;
+  /*object-fit: contain;*/
+  
+  /* Make the images glue to the left side */
+  display: inline;
+}
+/*
+.main-page:hover img{
+  transform: scale(1.5);
+}
+*/
+
+.image-container {
+  overflow: hidden;
+  width:100%;
+}
+
+.image-container img {
+  max-height:35em;
+  width: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+
+
+.main-page img{
+  max-width: 85%;
+  display: block;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  padding: 1em;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+
+
+  /* Adjust the padding for the links container */
+  #linksContainer {
+    padding: 5px 10px;
+  }
+
+  /* Adjust the font size for the links in the container */
+  #linksContainer a {
+    font-size: 14px;
+  }
+}
+
