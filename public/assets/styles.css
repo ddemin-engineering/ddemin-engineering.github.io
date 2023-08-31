@@ -15,7 +15,7 @@
     line-height: 1.5;
     color: #333;
     
-    background-image: url(./landscape-with-windmills.jpg);
+    background-image: url("./landscape-with-windmills.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
