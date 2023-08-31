@@ -19,7 +19,6 @@ a:active{text-decoration: none;color: black;}
 /* General styles */
 * {
     box-sizing: border-box;
-    /* margin: 0; */
     padding: 1;
     /* border: 1px solid red; */
     
@@ -42,10 +41,6 @@ html, body {
   /* Navigation bar styles */
   nav {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
     z-index: 2;
   }
   
@@ -53,18 +48,14 @@ html, body {
   #linksContainer {
     display: none;
   }
-  
+
   nav a {
-    display: none;
-    padding: 1rem;
+    position: relative;
     display: flex;
-    height: 3rem;
-    width:100%;
     justify-content: space-between;
     align-items: center;
-    /* padding: 1rem; */
     z-index: 2;
-  }
+ }
  
   nav a img {
     height: 4em;
@@ -73,7 +64,6 @@ html, body {
   }
 
   nav a h2 {
-    margin-left: 1em;
     font-family: 'Cormorant SC', serif;
     font-size: 2rem;
     color: whitesmoke;
