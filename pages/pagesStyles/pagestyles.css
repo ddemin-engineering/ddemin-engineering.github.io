@@ -18,8 +18,9 @@ a:active{text-decoration: none;color: black;}
 
 /* General styles */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 1;
     /* border: 1px solid red; */
     
   }
@@ -71,12 +72,14 @@ html, body {
 
 ul {
     list-style-type: disc;
+    padding: 0.5em 1em 1em 2em;
 }
 
 
 /* Main page styles */
 .main-page {
-  padding: 1rem;
+  padding-top: 2em;
+  padding-left: 0.5em;
   
   display: flex;
   flex-direction: column;
